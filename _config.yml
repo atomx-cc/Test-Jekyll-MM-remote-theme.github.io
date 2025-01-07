@@ -13,20 +13,19 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
-email:
+
+title: Atom.X
+email: hi@atomx.cc
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
+  Atom's webpages, an IT farmer, remote worker, Aaronic priest.
+twitter_username: Atomxx3
+github_username: Atomx3
 minimal_mistakes_skin: default
 search: true
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: mmistakes/minimal-mistakes@4.26.2
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
@@ -54,38 +53,42 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-data
   - jemoji
   - jekyll-include-cache
+  - jekyll-last-modified-at
 
 author:
-  name   : "First Lastname"
+  name   : " "
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "Actions speak louder than words. 
+  Only a life of continuous improvement is worth living."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://"
+      url: "https://atomx.cc"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/Atomxx3"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/Atomx3"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/atomxu3"
 
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/Atomxx3"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/Atomx3"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/atomxu3"
+
 
 defaults:
   # _posts
@@ -94,7 +97,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false # Remove sidebar from posts
       read_time: true
       comments: true
       share: true
@@ -105,7 +108,14 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false  # Remove sidebar from general pages
+
+ # Specifically for about page
+  - scope:
+      path: "_pages/about.md"
+    values:
+      layout: single
+      author_profile: true  # Keep sidebar for about page
 
 category_archive:
   type: liquid
