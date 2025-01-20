@@ -2,9 +2,9 @@
 title: "Resume: Social Works"
 date: 2017-2-4
 categories:
-  - About
+  - 关于
 tags:
-  - Resume
+  - 简介
 ---
 
 

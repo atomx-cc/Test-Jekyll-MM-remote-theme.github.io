@@ -2,9 +2,9 @@
 title: "Business experiences"
 date: 2017-2-3
 categories:
-  - About
+  - 关于
 tags:
-  - Resume
+  - 简介
 ---
 
 
